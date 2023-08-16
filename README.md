@@ -142,11 +142,11 @@ class AsInheritedWidget extends StatelessWidget {
 ```
 As you can see, the code is nearly identical. The magic comes from the aspect parameter that allows us to key in to the updated data that we care about, the InheritedModel does the rest for us, as you can see in the video below.
 
-### FlutterInheritedModel Vs InheritedWidget
+![InheritedModel vs InheritedWidget](https://flutter.institute/public/static/d78c8d42af3a17a07819d7649fedbb52/FlutterInheritedModelVsInheritedWidget.gif)
 
 You can see the behavior of the Inherited Model in the top section that each colored block is only updating when the number inside that block changes. In the lower section, you can see the Inherited Widget updates each block every time any of the numbers change.
 
-In Conclusion
+### In Conclusion
 Inherited Models are very powerful in that they allow us to intelligently share many things across our whole app using a single widget to manage them. One of the basic use cases is sharing multiple different network connections across the app. Also, I highly recommend using an enum to define your aspects, instead of using hard coded strings. It makes things so much easier to maintain.
 
 Thanks for reading, and happy inheriting!
