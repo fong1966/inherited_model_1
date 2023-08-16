@@ -1,4 +1,4 @@
-package com.example.inherited_model_1
+package com.example.inherited_widget_model
 
 import io.flutter.embedding.android.FlutterActivity
 

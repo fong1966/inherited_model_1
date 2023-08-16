@@ -1,6 +1,6 @@
 {
-    "name": "inherited_model_1",
-    "short_name": "inherited_model_1",
+    "name": "inherited_widget_model",
+    "short_name": "inherited_widget_model",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "inherited_model_1" "\0"
+            VALUE "FileDescription", "inherited_widget_model" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "inherited_model_1" "\0"
+            VALUE "InternalName", "inherited_widget_model" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "inherited_model_1.exe" "\0"
-            VALUE "ProductName", "inherited_model_1" "\0"
+            VALUE "OriginalFilename", "inherited_widget_model.exe" "\0"
+            VALUE "ProductName", "inherited_widget_model" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
