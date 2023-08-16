@@ -123,6 +123,7 @@ void main() => runApp(NumberManagerWidget(child: MyApp()));
 Using the InheritedModel
 Now that we have defined the model, we can use it to pass our dependencies around.
 
+```dart
 class AsInheritedModel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -138,6 +139,7 @@ class AsInheritedWidget extends StatelessWidget {
     return Text("Values: ${model.firstValue}, ${model.secondValue}, ${model.thirdValue}");
   }
 }
+```
 As you can see, the code is nearly identical. The magic comes from the aspect parameter that allows us to key in to the updated data that we care about, the InheritedModel does the rest for us, as you can see in the video below.
 
 ### FlutterInheritedModel Vs InheritedWidget
