@@ -55,7 +55,7 @@ class NumberManagerWidgetState extends State<NumberManagerWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return NumberModel(
+    return MyInheritedModel(
       firstValue: firstTick,
       secondValue: secondTick,
       thirdValue: thirdTick,

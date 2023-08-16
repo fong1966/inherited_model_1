@@ -3,17 +3,18 @@ part of 'inherited_widget_model.dart';
 class InheritedModelView extends StatelessWidget {
   final ColorRegistry r = ColorRegistry();
 
-  final NumberType type;
+  final AspectType aspectType;
 
-  InheritedModelView({super.key, required this.type});
+  InheritedModelView({super.key, required this.aspectType});
 
   @override
   Widget build(BuildContext context) {
-    final NumberModel? model = NumberModel.of(context, aspect: type);
+    final MyInheritedModel? model =
+        MyInheritedModel.of(context, aspect: aspectType);
 
     return _ColoredBox(
       color: r.nextColor(),
-      child: model!.getLabeledText(type),
+      child: model!.getLabeledText(aspectType),
     );
   }
 }

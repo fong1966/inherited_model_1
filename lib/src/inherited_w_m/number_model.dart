@@ -1,15 +1,15 @@
 part of 'inherited_widget_model.dart';
 
-enum NumberType {
+enum AspectType {
   first,
   second,
   third,
 }
 
-class NumberModel extends InheritedModel<NumberType> {
+class MyInheritedModel extends InheritedModel<AspectType> {
   final int firstValue, secondValue, thirdValue;
 
-  const NumberModel({
+  const MyInheritedModel({
     super.key,
     required this.firstValue,
     required this.secondValue,
@@ -17,25 +17,26 @@ class NumberModel extends InheritedModel<NumberType> {
     required Widget child,
   }) : super(child: child);
 
-  static NumberModel? of(BuildContext context, {NumberType? aspect}) {
-    return InheritedModel.inheritFrom<NumberModel>(context, aspect: aspect);
+  static MyInheritedModel? of(BuildContext context, {AspectType? aspect}) {
+    return InheritedModel.inheritFrom<MyInheritedModel>(context,
+        aspect: aspect);
   }
 
-  Widget getLabeledText(NumberType type) {
-    switch (type) {
-      case NumberType.first:
+  Widget getLabeledText(AspectType aspectType) {
+    switch (aspectType) {
+      case AspectType.first:
         return Text('First Number: $firstValue');
-      case NumberType.second:
+      case AspectType.second:
         return Text('Second Number: $secondValue');
-      case NumberType.third:
+      case AspectType.third:
         return Text('Third Number: $thirdValue');
       default:
-        return Text('Unknown Number Type $type');
+        return Text('Unknown Number Type $aspectType');
     }
   }
 
   @override
-  bool updateShouldNotify(covariant NumberModel oldWidget) {
+  bool updateShouldNotify(covariant MyInheritedModel oldWidget) {
     return firstValue != oldWidget.firstValue ||
         secondValue != oldWidget.secondValue ||
         thirdValue != oldWidget.thirdValue;
@@ -43,12 +44,12 @@ class NumberModel extends InheritedModel<NumberType> {
 
   @override
   bool updateShouldNotifyDependent(
-      covariant NumberModel oldWidget, Set<NumberType> dependencies) {
-    return (dependencies.contains(NumberType.first) &&
+      covariant MyInheritedModel oldWidget, Set<AspectType> dependencies) {
+    return (dependencies.contains(AspectType.first) &&
             oldWidget.firstValue != firstValue) ||
-        (dependencies.contains(NumberType.second) &&
+        (dependencies.contains(AspectType.second) &&
             oldWidget.secondValue != secondValue) ||
-        (dependencies.contains(NumberType.third) &&
+        (dependencies.contains(AspectType.third) &&
             oldWidget.thirdValue != thirdValue);
   }
 }

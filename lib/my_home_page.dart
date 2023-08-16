@@ -1,4 +1,4 @@
-import '/src/inherited_w_m/inherited_widget_model.dart';
+import 'inherited_widget_model.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -18,14 +18,14 @@ class MyHomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 const Text('Inherited Model Views'),
-                InheritedModelView(type: NumberType.first),
-                InheritedModelView(type: NumberType.second),
-                InheritedModelView(type: NumberType.third),
+                InheritedModelView(aspectType: AspectType.first),
+                InheritedModelView(aspectType: AspectType.second),
+                InheritedModelView(aspectType: AspectType.third),
                 const SizedBox(height: 25.0),
                 const Text('Inherited Widget Views'),
-                InheritedWidgetView(type: NumberType.first),
-                InheritedWidgetView(type: NumberType.second),
-                InheritedWidgetView(type: NumberType.third),
+                InheritedWidgetView(aspectType: AspectType.first),
+                InheritedWidgetView(aspectType: AspectType.second),
+                InheritedWidgetView(aspectType: AspectType.third),
               ],
             ),
           ],
