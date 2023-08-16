@@ -1,6 +1,4 @@
-import 'dart:async';
-
-import '/src/inherited_w_m/inherited_widget_model.dart';
+part of 'inherited_widget_model.dart';
 
 class NumberManagerWidget extends StatefulWidget {
   final int updateMs;
